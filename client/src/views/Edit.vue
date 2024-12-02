@@ -3,7 +3,7 @@
     <h1>Edit Word</h1>
     <form action="" @submit.prevent="onSubmit" class="edit-word__form">
       <div class="edit-word__input-group">
-        <div class="edit-word__label"><i class="vietnam flag"></i>Vietnamese</div>
+        <div class="edit-word__label">Vietnamese</div>
         <input type="text" required v-model="word.vietnamese" class="edit-word__input"/>
       </div>
       <br />
