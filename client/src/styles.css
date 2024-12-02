@@ -1,0 +1,261 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #EAE0D4; 
+  color: #4A4238; 
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #5E503F; 
+  padding: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+}
+
+.navbar .menu {
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
+  list-style: none;
+}
+
+.navbar .menu .item {
+  color: #FFF;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .menu .item:hover {
+  color: #2D2A23; 
+  background-color: #A9927D; 
+}
+
+.navbar .menu .item.active {
+  color: #2D2A23;
+}
+
+/* Table Styles for Words */
+.words-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.words-table th,
+.words-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #D1C6B1; 
+}
+
+.words-table th {
+  background-color: #F1F1F1;
+  color: #4A4238;
+  font-size: 18px;
+}
+
+.words-table__show,
+.words-table__edit,
+.words-table__delete {
+  color: #A9927D; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.words-table__show:hover,
+.words-table__edit:hover,
+.words-table__delete:hover {
+  color: #2D2A23; 
+  cursor: pointer;
+}
+
+/* Input Styles */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #B6A89A; 
+  border-radius: 20px;
+  background-color: #FFF;
+  font-size: 16px;
+}
+
+input[type="text"]:focus {
+  border-color: #5E503F; 
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  background-color: #4A4238; 
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #A9927D; 
+}
+
+.ui.button.green {
+  background-color: #4A4238;
+}
+
+.ui.button.green:hover {
+  background-color: #A9927D;
+}
+
+/* Flash Message Styles */
+.flash-message {
+  background-color: #A9927D;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.new-word__form,
+.edit-word__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.new-word__input-group,
+.edit-word__input-group {
+  margin-bottom: 20px;
+}
+
+.new-word__label,
+.edit-word__label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #4A4238;
+  margin-bottom: 8px;
+}
+
+.new-word__input,
+.edit-word__input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #B6A89A;
+  background-color: #FFF;
+  border-radius: 20px;
+}
+
+.new-word__input:focus,
+.edit-word__input:focus {
+  border-color: #5E503F;
+  outline: none;
+}
+
+/* Word Detail Styles */
+.word-detail__label {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4A4238;
+}
+
+.word-detail__input {
+  padding: 12px;
+  border: 1px solid #B6A89A;
+  background-color: #FFF;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.word-detail__edit-btn {
+  display: inline-block;
+  background-color: #4A4238;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.word-detail__edit-btn:hover {
+  background-color: #A9927D;
+}
+
+/* Delete All Confirmation Button */
+.words-table__delete-all {
+  color: #A9927D;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.words-table__delete-all:hover {
+  color: #2D2A23;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .ui.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+  }
+}
+
+
+.new-word {
+  width: 50%;
+  margin: auto;
+}
+
+.new-word__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-word__input-group {
+  margin-bottom: 15px;
+}
+
+.new-word__label {
+  font-weight: bold;
+}
+
+.new-word__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.new-word__submit-btn {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+
